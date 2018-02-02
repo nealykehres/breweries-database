@@ -1,0 +1,133 @@
+h1 {
+font-family: 'Roboto', sans-serif;
+text-align: center;
+  color: #782327;
+}
+
+body {
+  background-color: #FFF8DC;
+
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+    color: #006983;
+
+}
+
+.button {
+  color: #FFF8DC;
+  background-color: #006983;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+#container {
+  max-width: 800px;
+  margin: auto;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+table, th, td {
+   border-bottom: 1px solid #006983;
+   font-family: 'Roboto', sans-serif;
+   padding: 10px;
+}
+
+th {
+    background-color: #FEF1B5;
+    color: #006983;
+}
+
+tr:hover{
+  background-color: #EEE8CD;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+#tablediv {
+  width: 800px;
+  margin-left: auto ;
+   margin-right: auto ;
+
+}
+
+td {
+  height: 30px;
+  vertical-align: center;
+  text-align: center;
+}
+
+
+/* the code below makes the table responsive. Credit goes to https://css-tricks.com/responsive-data-tables/
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 300px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Brewery"; }
+	td:nth-of-type(2):before { content: "City"; }
+	td:nth-of-type(3):before { content: "Primary Color"; }
+	td:nth-of-type(4):before { content: "Secondary Color"; }
+
+}
